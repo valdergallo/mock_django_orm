@@ -24,3 +24,7 @@ class TestForm(TestCase):
     def test_valid_form(self):
         form = FormAppOne({'name': 'valder', 'description': 'validate name'})
         self.assertTrue(form.is_valid())
+
+    def test_save_valid_form(self):
+        form = FormAppOne({'name': 'valder', 'description': 'validate name'})
+        self.assertTrue(form.save())
