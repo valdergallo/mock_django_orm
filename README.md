@@ -85,4 +85,4 @@ class MockingThridTest(TestCase):
         result = AppThird.get_extra(self.appThrid)
         self.assertEqual(result, u'22-Test')
 
-``
+```
