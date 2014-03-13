@@ -20,8 +20,8 @@ class SimpleExample(TestCase):
 class GetDataFromDefaultDB(TestCase):
 
     def setUp(self):
-        AppOne.objects.create(name='admin', description='Test')
+        self.app = AppOne.objects.create(name='Admin', description='Test')
 
     def test_get_admin_user(self):
-        admin = AppOne.objects.get(name='admin')
-        self.assertTrue(admin.description)
+        result = self.app.get_full_description()
+        self.assertEqual(result, u'Admin / Test')
