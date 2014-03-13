@@ -2,4 +2,9 @@
 *.pot
 *.pyc
 *.sqlite3
+.cache
+.git
+.svn
+.hg
+__cache__
 local_settings.py
