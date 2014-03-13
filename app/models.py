@@ -1,4 +1,5 @@
 from django.db import models
+from app.managers import AppSecondManager
 
 
 class AppOne(models.Model):
@@ -15,6 +16,8 @@ class AppOne(models.Model):
 class AppSecond(models.Model):
     name = models.CharField(max_length=50)
     description = models.TextField()
+
+    objects = AppSecondManager()
 
     def __unicode__(self):
         return self.name
